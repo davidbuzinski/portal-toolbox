@@ -25,6 +25,7 @@ jobs:
   integration-tests:
     needs: package-toolbox
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-14, macos-13]
     runs-on: ${{ matrix.os }}
