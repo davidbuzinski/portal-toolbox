@@ -5,8 +5,14 @@ import matlab.buildtool.tasks.*
 plan = buildplan(localfunctions);
 
 plan("clean") = CleanTask;
+
 plan("check") = CodeIssuesTask;
-plan("mex") = MexTask("src/getCake.c", "toolbox/+portal");
+
+plan("mex:glnxa64") = MexTask("src/getCake.c", "toolbox/+portal", Options="TARGET=glnxa64");
+plan("mex:win64") = MexTask("src/getCake.c", "toolbox/+portal", Options="TARGET=win64");
+plan("mex:maca64") = MexTask("src/getCake.c", "toolbox/+portal", Options="TARGET=maca64");
+plan("mex:maci64") = MexTask("src/getCake.c", "toolbox/+portal", Options="TARGET=maci64");
+
 plan("test") = TestTask;
 
 plan("packageToolbox").Dependencies = "mex";
