@@ -3,7 +3,7 @@
     <param.appname>Portal Toolbox</param.appname>
     <param.authnamewatermark>David Buzinski</param.authnamewatermark>
     <param.email>davidb@mathworks.com</param.email>
-    <param.company>MathWorks</param.company>
+    <param.company />
     <param.summary />
     <param.description />
     <param.screenshot />
@@ -13,7 +13,7 @@
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.guid>2d4dc360-badd-4ced-b6ae-35a4b3825aca</param.guid>
+    <param.guid>94ba728b-ac92-4cf1-86fa-c771ca121e40</param.guid>
     <param.exclude.filters />
     <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
     <param.examples />
@@ -42,6 +42,7 @@
     <param.additional.sw.mac.url />
     <param.additional.sw.linux.url />
     <unset>
+      <param.company />
       <param.summary />
       <param.description />
       <param.screenshot />
@@ -83,7 +84,7 @@
       <file>${PROJECT_ROOT}\toolbox</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}\toolbox\+portal</file>
+      <file>${PROJECT_ROOT}\toolbox</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded />
