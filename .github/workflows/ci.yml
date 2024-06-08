@@ -6,9 +6,16 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-      - run: which matlab
+      - name: Setup mex
+        uses: matlab-actions/run-command@v2
+        with:
+          command: mex -setup
       - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2
+      - name: Run Tests
+        uses: matlab-actions/run-command@v2
+        with:
+          command: addpath("toolbox"); portal.getCake
       - name: Upload toolbox
         uses: actions/upload-artifact@v4
         with:
