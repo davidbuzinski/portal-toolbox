@@ -10,8 +10,8 @@ plan("check") = CodeIssuesTask;
 
 plan("mex:glnxa64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexa64", Options="TARGET=glnxa64");
 plan("mex:win64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexw64", Options="TARGET=win64");
-plan("mex:maca64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexmaci64", Options="TARGET=maca64");
-plan("mex:maci64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexmaca64", Options="TARGET=maci64");
+plan("mex:maci64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexmaci64", Options="TARGET=maci64");
+plan("mex:maca64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexmaca64", Options="TARGET=maca64");
 
 plan("test") = TestTask;
 
