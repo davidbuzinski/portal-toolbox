@@ -12,6 +12,8 @@ jobs:
           command: mex -setup
       - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2
+        with:
+          tasks: clean build
       - name: Upload toolbox
         uses: actions/upload-artifact@v4
         with:
