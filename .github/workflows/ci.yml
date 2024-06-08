@@ -16,6 +16,7 @@ jobs:
           path: |
             PortalToolbox.mltbx
   integration-tests:
+    needs: package-toolbox
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-14, macos-13]
