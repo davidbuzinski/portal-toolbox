@@ -39,10 +39,7 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: matlab.addons.install("PortalToolbox.mltbx")
-      - name: Run Tests
-        uses: matlab-actions/run-command@v2
-        with:
-          command: which portal.getCake
+      - run: ls "/Users/runner/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes/Portal Toolbox/+portal"
       - name: Run Tests
         uses: matlab-actions/run-command@v2
         with:
