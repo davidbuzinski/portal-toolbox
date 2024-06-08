@@ -34,7 +34,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:   
           name: Toolbox
-      - run: ls -R
       - name: Install toolbox
         uses: matlab-actions/run-command@v2
         with:
