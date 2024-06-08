@@ -12,10 +12,6 @@ jobs:
           command: mex -setup
       - name: Run MATLAB Build
         uses: matlab-actions/run-build@v2
-      - name: Run Tests
-        uses: matlab-actions/run-command@v2
-        with:
-          command: addpath("toolbox"); portal.getCake
       - name: Upload toolbox
         uses: actions/upload-artifact@v4
         with:
@@ -44,4 +40,8 @@ jobs:
       - name: Run Tests
         uses: matlab-actions/run-command@v2
         with:
-          command: disp(matlab.addons.installedAddons); portal.getCake
+          command: which portal.getCake
+      - name: Run Tests
+        uses: matlab-actions/run-command@v2
+        with:
+          command: portal.getCake
