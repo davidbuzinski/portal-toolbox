@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="/Users/davidb/workspace/portal-toolbox/ToolboxPackaging.prj" location="/Users/davidb/workspace/portal-toolbox" name="ToolboxPackaging" target="target.toolbox" target-name="Package Toolbox">
+  <configuration file="C:\Users\davidb\portal-toolbox\ToolboxPackaging.prj" location="C:\Users\davidb\portal-toolbox" name="ToolboxPackaging" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Portal Toolbox</param.appname>
     <param.authnamewatermark>David Buzinski</param.authnamewatermark>
     <param.email>davidb@mathworks.com</param.email>
@@ -8,7 +8,7 @@
     <param.description />
     <param.screenshot />
     <param.version>1.0</param.version>
-    <param.output>${PROJECT_ROOT}/Portal Toolbox.mltbx</param.output>
+    <param.output>${PROJECT_ROOT}\Portal Toolbox.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -80,78 +80,42 @@
       <param.additional.sw.linux.url />
     </unset>
     <fileset.rootdir>
-      <file>${PROJECT_ROOT}/toolbox</file>
+      <file>${PROJECT_ROOT}\toolbox</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}/toolbox/+portal</file>
+      <file>${PROJECT_ROOT}\toolbox\+portal</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="Portal Toolbox.mltbx" optional="false">/Users/davidb/workspace/portal-toolbox/Portal Toolbox.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="Portal Toolbox.mltbx" optional="false">C:\Users\davidb\portal-toolbox\Portal Toolbox.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>/System/Volumes/Data/mathworks/devel/sbs/50/davidb.Bmain.j2624383/matlab</root>
+      <root>C:\Program Files\MATLAB\R2024a</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
-        <toolbox name="embeddedcoder" />
-        <toolbox name="gpucoder" />
-        <toolbox name="fixedpoint" />
-        <toolbox name="matlabhdlcoder" />
-        <toolbox name="neuralnetwork" />
-        <toolbox name="polyspacebugfinder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
           <enabled>true</enabled>
         </matlabcoder>
       </toolbox>
-      <toolbox>
-        <embeddedcoder>
-          <enabled>true</enabled>
-        </embeddedcoder>
-      </toolbox>
-      <toolbox>
-        <gpucoder>
-          <enabled>true</enabled>
-        </gpucoder>
-      </toolbox>
-      <toolbox>
-        <fixedpoint>
-          <enabled>true</enabled>
-        </fixedpoint>
-      </toolbox>
-      <toolbox>
-        <matlabhdlcoder>
-          <enabled>true</enabled>
-        </matlabhdlcoder>
-      </toolbox>
-      <toolbox>
-        <neuralnetwork>
-          <enabled>true</enabled>
-        </neuralnetwork>
-      </toolbox>
-      <toolbox>
-        <polyspacebugfinder>
-          <enabled>true</enabled>
-        </polyspacebugfinder>
-      </toolbox>
     </matlab>
     <platform>
-      <unix>true</unix>
-      <mac>true</mac>
-      <windows>false</windows>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
       <win2k>false</win2k>
       <winxp>false</winxp>
       <vista>false</vista>
       <linux>false</linux>
       <solaris>false</solaris>
-      <osver>14.5</osver>
+      <osver>10.0</osver>
       <os32>false</os32>
       <os64>true</os64>
-      <arch>maci64</arch>
+      <arch>win64</arch>
       <matlab>true</matlab>
     </platform>
   </configuration>
