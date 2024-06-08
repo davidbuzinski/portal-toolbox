@@ -28,18 +28,17 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-14, macos-13]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
       - name: Download toolbox 
         uses: actions/download-artifact@v4
         with:   
-          pattern: Toolbox
+          name: Toolbox
+      - run: ls -R
       - name: Install toolbox
         uses: matlab-actions/run-command@v2
         with:
           command: matlab.addons.install("PortalToolbox.mltbx")
-      - run: ls "/Users/runner/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes/Portal Toolbox/+portal"
       - name: Run Tests
         uses: matlab-actions/run-command@v2
         with:
