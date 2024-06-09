@@ -14,10 +14,12 @@ plan("mex:maci64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCa
 plan("mex:maca64") = MexTask("src/getCake.c", "toolbox/+portal", Filename="getCake.mexmaca64", Options="TARGET=maca64");
 
 plan("test") = TestTask;
+plan("test").PreferredPredecessors = "mex";
 
 plan("packageToolbox").Dependencies = "mex";
 plan("packageToolbox").Inputs.PrjFile = plan.files("ToolboxPackaging.prj");
 plan("packageToolbox").Outputs.MltbxFile = plan.files("PortalToolbox.mltbx");
+plan("packageToolbox").PreferredPredecessors = ["check" "test"];
 
 plan("assemble") = Task;
 plan("assemble").Dependencies = "packageToolbox";
